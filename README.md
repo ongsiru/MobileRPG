@@ -12,7 +12,7 @@ Developed with Unreal Engine 5 and Visual Studio 2022
 - <b>2023-10-13 | Chatting System</b><br> 클라이언트에서 사용자가 Enter키 또는 Touch를 사용하여 문자열 정보가 담긴 패킷을 서버에 전달하면 서버가 모든 사용자들에게 문자를 Broadcasting 하는 시스템을 설계했다. 대규모 프로젝트의 경우, DB서버와 통신하는 것이 일반적이기 때문에 구조체를 만들어서 버퍼 형식으로 문자열 정보를 담을 수 있도록 작성했다. 뿐만 아니라, 이를 활용하여 추후에 왼쪽 하단 인터페이스에 정보 및 전투 로그를 뛰울 예정이다. 직접 작성한 서버 코어를 사용했다면 이러한 부분도 멀티쓰레딩으로 처리할 수 있었지 않았을까 아쉬움이 남는다. <br>
 ![스크린샷 2023-10-14 004314](https://github.com/ongsiru/MobileRPG/assets/99703356/ed2d6d7b-caf5-478e-9035-73dd6042111b)
 
-- <b>2023-10-13 | Material Graph</b><br> 머터리얼은 3D 모델의 Texture와 물리적 특성을 결정하는 데 사용되는 Asset이다. 언리얼에서 제공하는 그래프를 통해 부모 클래스로부터 상속받는 구조를 확인할 수 있었다. 언리얼 마켓플레이스에서 받은 Map Level을 로드했을 때 Foliage로 적용된 잡초 Material의 Panning에 문제가 있었고 이를 수정해주었다. <br> 
+- <b>2023-10-13 | Material Graph</b><br> 머터리얼은 3D 모델의 Texture와 물리적 특성을 결정하는 데 사용되는 Asset이다. 언리얼에서 제공하는 그래프를 통해 부모 클래스로부터 상속받는 구조를 확인할 수 있었다. 언리얼 마켓플레이스에서 받은 Map Level을 로드했을 때 Foliage로 적용된 잡초 Material의 BaseColor에 문제가 있었고 이를 수정해주었다. <br> 
 ![그림1](https://github.com/ongsiru/MobileRPG/assets/99703356/30cbd0a9-9882-4264-ab26-f7668cabb2e6)
 <br>🔗 언리얼 공식문서 : https://docs.unrealengine.com/5.0/ko/previewing-and-applying-your-materials-in-unreal-engine/
 <br>🔗 오구리의 디자인시스템노트 티스토리 : https://wdnote.tistory.com/205
