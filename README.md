@@ -22,6 +22,9 @@ Developed with Unreal Engine 5 and Visual Studio 2022
 C++ 클래스의 GameInstance를 상속받으면 전역 클래스를 이용하여 데이터를 관리할 수 있다. 데이터와 코드를 분리하기 위해 해당 게임인스턴스 헤더에서 구조체 작성 후 C++ 게임인스턴스 기반의 블루프린트에서 데이터를 가져와 갱신한다. 갱신한 데이터 중 HP를 각 캐릭터의 컴포넌트 유저 인터페이스 위젯으로 추가하고 리플리케이트 옵션을 추가한다. <br>
 ![그림1](https://github.com/ongsiru/MobileRPG/assets/99703356/64ceb225-5056-479e-aaee-d73b3baca347)
 
+
+<br>🔗 피벗 영점 맞추기 개꿀팁 : https://www.youtube.com/watch?v=Spka7UXFYKs
+
 ## 3. Extras
 - <b><a href="https://www.youtube.com/watch?v=n3x1fErlmYA">How to push or pull Unreal projects</a></b>
 - <b><a href="https://www.youtube.com/watch?v=7payS86oJ0k">Android environment setting and packaging</a></b>
