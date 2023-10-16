@@ -18,12 +18,13 @@ Developed with Unreal Engine 5 and Visual Studio 2022
 <br>🔗 오구리의 디자인시스템노트 티스토리 : https://wdnote.tistory.com/205
 <br>🔗 To share on Experience 티스토리 : https://vrworld.tistory.com/19
 
-- <b>2023-10-15 | User status</b><br>
-C++ 클래스의 GameInstance를 상속받으면 전역 클래스를 이용하여 데이터를 관리할 수 있다. 데이터와 코드를 분리하기 위해 해당 게임인스턴스 헤더에서 구조체 작성 후 C++ 게임인스턴스 기반의 블루프린트에서 데이터를 가져와 갱신한다. 갱신한 데이터 중 HP를 각 캐릭터의 컴포넌트 유저 인터페이스 위젯으로 추가하고 리플리케이트 옵션을 추가한다. <br>
+- <b>2023-10-15 | User status</b><br> C++ 클래스의 GameInstance를 상속받으면 전역 클래스를 이용하여 데이터를 관리할 수 있다. 데이터와 코드를 분리하기 위해 해당 게임인스턴스 헤더에서 구조체 작성 후 C++ 게임인스턴스 기반의 블루프린트에서 데이터를 가져와 갱신한다. 갱신한 데이터 중 HP를 각 캐릭터의 컴포넌트 유저 인터페이스 위젯으로 추가하고 리플리케이트 옵션을 추가한다. <br>
 ![그림1](https://github.com/ongsiru/MobileRPG/assets/99703356/64ceb225-5056-479e-aaee-d73b3baca347)
 
 
-<br>🔗 피벗 영점 맞추기 개꿀팁 : https://www.youtube.com/watch?v=Spka7UXFYKs
+- <b>2023-10-16 | AI Moster using RPC, Tree </b><br> 몬스터 하나를 구현하기 위해서는 방대한 정보가 필요했다. 우선 몬스터 캐릭터의 애니메이션이 필요하다. 피벗을 맞추고 시퀀스를 만들고 모션을 블렌딩한 후 State Machine에 인가해야 한다. 스킬의 경우에 애니메이션 몬타주를 사용한다. 그리고 플레이어를 따라오는 함수를 작성하고 속도에 맞게 조건부 처리를 해준다. 하지만 이 모든 과정에서 서버와 클라이언의 오브젝트가 일치해야 하므로 RPC의 개념을 알아야 한다. 데디 서버의 API인 Multicast를 사용하여 서버 소유인 몬스터를 서버와 클라이언트에 실행되도록 처리했다. 
+![스크린샷 2023-10-16 111555](https://github.com/ongsiru/MobileRPG/assets/99703356/f3d3b995-8811-4761-8ed5-7eb73b6ad215)
+<br>🔗 피벗 영점 맞추기 꿀팁 : https://www.youtube.com/watch?v=Spka7UXFYKs
 
 ## 3. Extras
 - <b><a href="https://www.youtube.com/watch?v=n3x1fErlmYA">How to push or pull Unreal projects</a></b>
