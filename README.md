@@ -30,6 +30,8 @@ Developed with Unreal Engine 5 and Visual Studio 2022
 ![KakaoTalk_20231017_195045129](https://github.com/ongsiru/MobileRPG/assets/99703356/82dfcaf7-22e5-4615-921a-7c0fd7201b5e)
 
 - <b>2023-10-21 | Unreal Slate </b><br> 커스텀 UI 프레임워크로 React/CSS의 문법 체계와 상당히 비슷하며 컴포넌트를 디자인하기 위한 언어이다. 인게임 메뉴 화면을 구현하기 위해 C++ class로 HUD, SlateWidget, GameMode, Controller을 작성했다. UMG같은 경우에 Unreal JavaScript를 사용해서 아예 React Native Interface를 사용할 수 있고 웹 컴포넌트처 렌더링을 할 수 있다. 하지만 Pooling 방식으로 성능자체는 비효율적이나 개발의 편의를 위해서 존재한다고 한다.<br>
+![그림1](https://github.com/ongsiru/MobileRPG/assets/99703356/08c9d923-24e4-4b8b-aa62-7f8f62d6ac97)
+<br>
 🔗NCsoft 자료 : https://www.slideshare.net/crocuis/unrealjs-ue4-75499471<br>
 🔗Introduce Slate : https://www.youtube.com/watch?v=jeK6DPB5weA
 
