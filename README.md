@@ -22,12 +22,16 @@ Developed with Unreal Engine 5 and Visual Studio 2022
 ![그림1](https://github.com/ongsiru/MobileRPG/assets/99703356/64ceb225-5056-479e-aaee-d73b3baca347)
 
 
-- <b>2023-10-16 | AI Moster using RPC, Tree </b><br> 몬스터 하나를 구현하기 위해서는 방대한 정보가 필요했다. 우선 몬스터 캐릭터의 애니메이션이 필요하다. 피벗을 맞추고 시퀀스를 만들고 모션을 블렌딩한 후 State Machine에 인가해야 한다. 스킬의 경우에 애니메이션 몬타주를 사용한다. 그리고 플레이어를 따라가는 알고리즘을 작성하고 속도에 맞게 조건부 처리를 해준다. 하지만 이 모든 과정에서 서버와 클라이언트의 오브젝트가 일치해야 하므로 RPC의 개념을 알아야 한다. 서버 소유의 오브젝트가 먼저 작동하고 후에 서버와 클라이언트에 멀티캐스트 되도록 처리했다. 또 트리 구조를 사용하여 몬스터의 모션을 다양화했다. <br>
+- <b>2023-10-16 | AI Moster and Animation RPC </b><br> 몬스터 하나를 구현하기 위해서는 방대한 정보가 필요했다. 우선 몬스터 캐릭터의 애니메이션이 필요하다. 피벗을 맞추고 시퀀스를 만들고 모션을 블렌딩한 후 State Machine에 인가해야 한다. 스킬의 경우에 애니메이션 몬타주를 사용한다. 그리고 플레이어를 따라가는 알고리즘을 작성하고 속도에 맞게 조건부 처리를 해준다. 하지만 이 모든 과정에서 서버와 클라이언트의 오브젝트가 일치해야 하므로 RPC의 개념을 알아야 한다. 서버 소유의 오브젝트가 먼저 작동하고 후에 서버와 클라이언트에 멀티캐스트 되도록 처리했다. 또 트리 구조를 사용하여 몬스터의 모션을 다양화했다. <br>
 ![스크린샷 2023-10-16 111555](https://github.com/ongsiru/MobileRPG/assets/99703356/f3d3b995-8811-4761-8ed5-7eb73b6ad215)
 <br>🔗 피벗 영점 맞추기 팁 : https://www.youtube.com/watch?v=Spka7UXFYKs
 
-- <b>2023-10-17 | Skill Animation </b><br> 유저의 행동이나 특정 스킬이 서버 오브젝트에서 먼저 구동한 다음, 모든 클라이언트와 동기화를 해줘야 클라이언트들은 동일 오브젝트라고 착각을 할 수 있다. 앞으로 이러한 개념을 바탕으로 스킬 애니메이션들을 추가해주면 된다. 칼을 내리칠 때 피격 판정은 Sword 벡터의 Linetrace를 구하여 Animnotify의 지정된 부분에서 함수가 작동하도록 설계하였다. 서버에서 데미지 처리와 같은 중요한 데이터도 관리하는데 이를 다시 클라이언트 오브젝트에 동기화를 시켜줄 땐 현재 리플리케이트 된 오브젝트들을 캐스팅해줘야한다. 이때 pulling 방식으로 클라이언트에서 서버의 HP data를 가져오도록 틱 이벤트 처리했다.<br>
+- <b>2023-10-17 | Damage Trace </b><br> 유저의 행동이나 특정 스킬이 서버 오브젝트에서 먼저 구동한 다음, 모든 클라이언트와 동기화를 해줘야 클라이언트들은 동일 오브젝트라고 착각을 할 수 있다. 앞으로 이러한 개념을 바탕으로 스킬 애니메이션들을 추가해주면 된다. 칼을 내리칠 때 피격 판정은 Sword 벡터의 Linetrace를 구하여 Animnotify의 지정된 부분에서 함수가 작동하도록 설계하였다. 서버에서 데미지 처리와 같은 중요한 데이터도 관리하는데 이를 다시 클라이언트 오브젝트에 동기화를 시켜줄 땐 현재 리플리케이트 된 오브젝트들을 캐스팅해줘야한다. 이때 pulling 방식으로 클라이언트에서 서버의 HP data를 가져오도록 틱 이벤트 처리했다.<br>
 ![KakaoTalk_20231017_195045129](https://github.com/ongsiru/MobileRPG/assets/99703356/82dfcaf7-22e5-4615-921a-7c0fd7201b5e)
+
+- <b>2023-10-21 | Unreal Slate </b><br> 커스텀 UI 프레임워크로 React/CSS의 문법 체계와 상당히 비슷하며 컴포넌트를 디자인하기 위한 언어이다. 인게임 메뉴 화면을 구현하기 위해 C++ class로 HUD, SlateWidget, GameMode, Controller을 작성했다. UMG같은 경우에 Unreal JavaScript를 사용해서 아예 React Native Interface를 사용할 수 있고 웹 컴포넌트처 렌더링을 할 수 있다. 하지만 Pooling 방식으로 성능자체는 비효율적이나 개발의 편의를 위해서 존재한다고 한다.
+🔗NCsoft 자료 : https://www.slideshare.net/crocuis/unrealjs-ue4-75499471
+🔗Introduce Slate : https://www.youtube.com/watch?v=jeK6DPB5weA
 
 ## 3. Extras
 - <b><a href="https://www.youtube.com/watch?v=n3x1fErlmYA">How to push or pull Unreal projects</a></b>
