@@ -29,7 +29,7 @@ Developed with Unreal Engine 5 and Visual Studio 2022
 - <b>2023-10-17 | Damage Trace </b><br> 유저의 행동이나 특정 스킬이 서버 오브젝트에서 먼저 구동한 다음, 모든 클라이언트와 동기화를 해줘야 클라이언트들은 동일 오브젝트라고 착각을 할 수 있다. 앞으로 이러한 개념을 바탕으로 스킬 애니메이션들을 추가해주면 된다. 칼을 내리칠 때 피격 판정은 Sword 벡터의 Linetrace를 구하여 Animnotify의 지정된 부분에서 함수가 작동하도록 설계하였다. 서버에서 데미지 처리와 같은 중요한 데이터도 관리하는데 이를 다시 클라이언트 오브젝트에 동기화를 시켜줄 땐 현재 리플리케이트 된 오브젝트들을 캐스팅해줘야한다. 이때 pulling 방식으로 클라이언트에서 서버의 HP data를 가져오도록 틱 이벤트 처리했다.<br>
 ![KakaoTalk_20231017_195045129](https://github.com/ongsiru/MobileRPG/assets/99703356/82dfcaf7-22e5-4615-921a-7c0fd7201b5e)
 
-- <b>2023-10-21 | Unreal Slate </b><br> 커스텀 UI 프레임워크로 React/CSS의 문법 체계와 상당히 비슷하며 컴포넌트를 디자인하기 위한 언어이다. 인게임 메뉴 화면을 구현하기 위해 C++ class로 HUD, SlateWidget, GameMode, Controller을 작성했다. UMG같은 경우에 Unreal JavaScript를 사용해서 아예 React Native Interface를 사용할 수 있고 웹 컴포넌트처 렌더링을 할 수 있다. 하지만 Pooling 방식으로 성능자체는 비효율적이나 개발의 편의를 위해서 존재한다고 한다.<br>
+- <b>2023-10-21 | Unreal Slate </b><br> 커스텀 UI 프레임워크로 React/CSS의 문법 체계와 상당히 비슷하며 컴포넌트를 디자인하기 위한 언어이다. 인게임 메뉴 화면을 구현하기 위해 C++ class로 HUD, SlateWidget, GameMode, Controller를 작성하고 상위 클래스로 세팅해줬다. UMG같은 경우에 Unreal JavaScript 언어로 아예 React Native Interface를 사용할 수 있고 웹 컴포넌트처럼 렌더링을 할 수 있다. 하지만 Pooling 방식으로 성능자체는 비효율적이나 개발의 편의를 위해서 존재한다고 한다.<br>
 ![그림1](https://github.com/ongsiru/MobileRPG/assets/99703356/08c9d923-24e4-4b8b-aa62-7f8f62d6ac97)
 <br>
 🔗NCsoft 자료 : https://www.slideshare.net/crocuis/unrealjs-ue4-75499471<br>
