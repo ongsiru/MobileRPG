@@ -1,5 +1,8 @@
 # MobileRPG
 Developed with Unreal Engine 5 and Visual Studio 2022
+<br>
+- <b>2023-10-18 | Demo Video (Youtube)</b><br>
+[![Video Label](http://img.youtube.com/vi/Zh8JfhjopWo/0.jpg)](https://youtu.be/Zh8JfhjopWo)
 
 ## 1. Server
 - <b>2023-10-04 | Dedicated Server Build</b><br> 언리얼에서 제공하는 두 가지 서버-클라이언트 모델 중에서 Dedicated Server를 통해 모바일과 PC로 플레이 할 수 있는 멀티 게임을 제작할 계획이다. 현재 로컬 ip로 서버에 다중 접속이 가능하도록 구현했고 아래의 자료를 참고했다.<br>🔗 언리얼 공식문서 : https://docs.unrealengine.com/5.0/ko/setting-up-dedicated-servers-in-unreal-engine/ <br>🔗 ZepehWAVE 티스토리 : https://zepeh.tistory.com/577<br><br> 다중 접속자의 수가 적다면 Dedicated Server가 유용하지만 싱글 쓰레드를 사용하기 때문에 MMORPG와 같이 실시간으로 대규모 트래픽을 처리해야하는 경우에 멀티 쓰레드를 사용하는 IOCP서버를 직접 구축한다. 언리얼 엔진에서 제공하는 소켓통신을 위한 API인 FSocket을 이용하거나 WinAPI인 Winsock을 이용하여 Overlapped I/O(비동기+논블락)를 구현해야 한다.<br>
@@ -30,8 +33,7 @@ Developed with Unreal Engine 5 and Visual Studio 2022
 ![KakaoTalk_20231017_195045129](https://github.com/ongsiru/MobileRPG/assets/99703356/82dfcaf7-22e5-4615-921a-7c0fd7201b5e)
 
 - <b>2023-10-21 | Unreal Slate </b><br> 커스텀 UI 프레임워크로 React/CSS의 문법 체계와 상당히 비슷하며 컴포넌트를 디자인하기 위한 언어이다. 인게임 메뉴 화면을 구현하기 위해 C++ class로 HUD, SlateWidget, GameMode, Controller를 작성하고 상위 클래스로 세팅해줬다. UMG같은 경우에 Unreal JavaScript 언어로 아예 React Native Interface를 사용할 수 있고 웹 컴포넌트처럼 렌더링을 할 수 있다. 하지만 Pooling 방식으로 성능자체는 비효율적이나 개발의 편의를 위해서 존재한다고 한다.<br>
-![그림1](https://github.com/ongsiru/MobileRPG/assets/99703356/08c9d923-24e4-4b8b-aa62-7f8f62d6ac97)
-<br>
+![그림1](https://github.com/ongsiru/MobileRPG/assets/99703356/08c9d923-24e4-4b8b-aa62-7f8f62d6ac97) <br>
 🔗NCSOFT 자료 : https://www.slideshare.net/crocuis/unrealjs-ue4-75499471<br>
 🔗Introduce Slate : https://www.youtube.com/watch?v=jeK6DPB5weA
 
